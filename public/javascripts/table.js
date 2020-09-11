@@ -1,12 +1,21 @@
 $(document).ready(function() {
-    $('#bitcoins').DataTable( {
-        "ajax": "https://reqres.in/api/users/2",
+   $('#bitcoins').DataTable( {
+        "ajax": {
+            "type":"GET",
+            "url":"https://api.coincap.io/v2/assets",
+            "dataSrc":"data",
+            "contentType": 'application/json; charset=utf-8',
+        },
         "columns": [
-            { "data": "id" },
-            { "data": "email" },
-            { "data": "first_name" },
-            { "data": "last_name" },
-            { "data": "avatar" },
+            { "data": "symbol" },
+            { "data": "name" },
+            { "data": "priceUsd" },
+            { "data": "marketCapUsd" },
+            { "data": "changePercent24Hr"},
+            {
+                "data": null,
+                "defaultContent": "<button class='btn btn-primary'>More Info</button>"
+            }
         ]
     } );
 } );
