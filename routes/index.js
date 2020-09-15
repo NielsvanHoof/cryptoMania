@@ -6,7 +6,7 @@ router.get('/', (req, res) => {
   });
 
 
-router.get("/Portfolio", async (req, res) => {
+router.get("/Portfolio",  (req, res) => {
       res.render('portfolio', { title: 'Wallet' });
   })
 module.exports = router;

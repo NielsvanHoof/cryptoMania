@@ -1,3 +1,7 @@
 body{
     overflow-x: hidden;
 }
+
+#bitcoins_wrapper{
+    margin-top: 10px;
+}
