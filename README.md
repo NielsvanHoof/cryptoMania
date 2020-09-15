@@ -39,7 +39,7 @@
 
 ## :dart: About ##
 
-Describe your project
+Crypto-coin tracker made with express and nodeJs using the EJS templating engine
 
 ## :sparkles: Features ##
 
@@ -53,9 +53,9 @@ The following tools were used in this project:
 
 - [Expo](https://expo.io/)
 - [Node.js](https://nodejs.org/en/)
-- [React](https://pt-br.reactjs.org/)
-- [React Native](https://reactnative.dev/)
-- [TypeScript](https://www.typescriptlang.org/)
+- [Bootstrap](https://getbootstrap.com/)
+- [Chart.js] (https://www.chartjs.org/)
+- [Express] (https://expressjs.com/)
 
 ## :white_check_mark: Requirements ##
 
@@ -71,10 +71,10 @@ $ git clone https://github.com/NielsvanHoof/cryptomania
 $ cd cryptomania
 
 # Install dependencies
-$ yarn
+$ npm install
 
 # Run the project
-$ yarn start
+$ npm start
 
 # The server will initialize in the <http://localhost:3000>
 ```
