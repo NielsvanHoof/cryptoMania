@@ -48,8 +48,8 @@ The following tools were used in this project:
 - [Expo](https://expo.io/)
 - [Node.js](https://nodejs.org/en/)
 - [Bootstrap](https://getbootstrap.com/)
-- [Chart.js] (https://www.chartjs.org/)
-- [Express] (https://expressjs.com/)
+- [Chart.js](https://www.chartjs.org/)
+- [Express](https://expressjs.com/)
 
 ## :white_check_mark: Requirements ##
 
