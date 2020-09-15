@@ -1,10 +1,3 @@
-<div align="center" id="top"> 
-  <img src="./.github/app.gif" alt="Cryptomania" />
-
-  &#xa0;
-
-  <!-- <a href="https://cryptomania.netlify.app">Demo</a> -->
-</div>
 
 <h1 align="center">Cryptomania</h1>
 
