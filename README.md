@@ -44,8 +44,6 @@ Crypto-coin tracker made with express and nodeJs using the EJS templating engine
 ## :rocket: Technologies ##
 
 The following tools were used in this project:
-
-- [Expo](https://expo.io/)
 - [Node.js](https://nodejs.org/en/)
 - [Bootstrap](https://getbootstrap.com/)
 - [Chart.js](https://www.chartjs.org/)
