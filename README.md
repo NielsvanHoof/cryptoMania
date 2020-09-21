@@ -2,9 +2,9 @@
 <h1 align="center">Cryptomania</h1>
 
 <p align="center">
-  <img alt="Github top language" src="https://img.shields.io/github/languages/top/NielsvanHoof/cryptomania?color=56BEB8">
+  <img alt="Github top language" src="https://img.shields.io/github/languages/top/NielsvanHoof/cryptoMania?color=56BEB8">
 
-  <img alt="Github language count" src="https://img.shields.io/github/languages/count/NielsvanHoof/cryptomania?color=56BEB8">
+  <img alt="Github language count" src="https://img.shields.io/github/languages/count/NielsvanHoof/cryptoMania?color=56BEB8">
 
   <img alt="Repository size" src="https://img.shields.io/github/repo-size/NielsvanHoof/cryptomania?color=56BEB8">
 
@@ -45,8 +45,6 @@ Crypto-coin tracker made with express and nodeJs using the EJS templating engine
 ## :rocket: Technologies ##
 
 The following tools were used in this project:
-
-- [Expo](https://expo.io/)
 - [Node.js](https://nodejs.org/en/)
 - [Bootstrap](https://getbootstrap.com/)
 - [Chart.js](https://www.chartjs.org/)
