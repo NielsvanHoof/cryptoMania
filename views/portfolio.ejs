@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %> </title>
+    <% include components/header.ejs %>
+</head>
+
+<body>
+    <% include components/navbar.ejs %>
+
+    <div class="container-fluid">
+        <div class="row justify-content-center">
+            <div class="col-auto">
+                <table id="bitcoins" class="table table-striped table-bordered dt-responsive nowrap table-hover"
+                    style="width: max-content;">
+                    <thead>
+                        <tr>
+                            <th scope="col">Id</th>
+                            <th scope="col">Short</th>
+                            <th scope="col">Coin</th>
+                            <th scope="col">Price</th>
+                            <th scope="col">Market Cap</th>
+                            <th scope="col">%24H</th>
+                            <th scope="col">More Info</th>
+                        </tr>
+                    </thead>
+                    <tfoot>
+                        <tr>
+                            <th scope="col">Id</th>
+                            <th scope="col">Short</th>
+                            <th scope="col">Coin</th>
+                            <th scope="col">Price</th>
+                            <th scope="col">Market Cap</th>
+                            <th scope="col">%24H</th>
+                            <th scope="col">More Info</th>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div id="info-modal" class="modal" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 id="title-modal" class="modal-title"></h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <canvas id="myChart"></canvas>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<% include components/scripts.ejs %>
+
+</html>

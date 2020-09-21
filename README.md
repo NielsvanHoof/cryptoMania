@@ -10,6 +10,7 @@
 
   <img alt="License" src="https://img.shields.io/github/license/NielsvanHoof/cryptomania?color=56BEB8">
 
+
   <!-- <img alt="Github issues" src="https://img.shields.io/github/issues/NielsvanHoof/cryptomania?color=56BEB8" /> -->
 
   <!-- <img alt="Github forks" src="https://img.shields.io/github/forks/NielsvanHoof/cryptomania?color=56BEB8" /> -->

@@ -1,10 +1,15 @@
 /* eslint-disable no-unused-vars */
-const pool = require('pg').Pool
+const {Pool} = require('pg');
 
-const db = new pool({
+const pool = new Pool({
     user:'postgres',
     host:"localhost",
     database: "cryptoMania",
     password:"Tankcrusher4",
     port:5432
-})
+});
+
+module.exports = {
+    query: (text, params) => pool.query(text, params),
+  }
+

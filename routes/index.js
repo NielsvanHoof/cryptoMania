@@ -1,13 +1,11 @@
-var express = require('express');
-var router = express.Router();
+const login = require('./login');
+const register = require('./register');
+const portfolio = require('./portfolio');
+const home = require('./home.js');
 
-router.get('/', (req, res) => {
-    res.render('index', { title: 'Home' });
-  });
-
-
-router.get("/Portfolio",  (req, res) => {
-      res.render('portfolio', { title: 'Wallet' });
-  })
-module.exports = router;
-
+module.exports = app => {
+  app.use('/login', login);
+  app.use('/portfolio', portfolio);
+  app.use('/register',register);
+  app.use('/',home);
+}
