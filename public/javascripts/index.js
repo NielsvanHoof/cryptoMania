@@ -43,22 +43,30 @@ function initModal(table) {
     })
 }
 
-async function getHistory(data) {
+function getHistory(data) {
     try {
         let now = new Date();
         let timeToday = now.setDate(now.getDate());
         let timeWeekAgo = now.setDate(now.getDate()-7);
 
-        let response = await (await fetch(`https://api.coincap.io/v2/assets/${data.id}/history?interval=d1&start=${timeWeekAgo}&end=${timeToday}`)).json();
+        $.ajax({
+            type: "GET",
+            url: `https://api.coincap.io/v2/assets/${data.id}/history?interval=d1&start=${timeWeekAgo}&end=${timeToday}`,
+            dataType: "json",
+            success: function (data) {
+                let dateArray = [];
+                let priceArray = [];
 
-        let date = new Date(response.data.date);
-        
-        let convertedDate = date.toISOString().replace("/T.*/",'').split('-').reverse().join('-');
+                $.each(data.data, (indexInArray, valueOfElement) => {
+                        let date = new Date(valueOfElement.date);
+                        let convertedDate = date.toISOString().replace(/T.*/, '').split('-').reverse().join('-');
 
-        const dateArray = convertedDate.map(x => x.date);
-        const priceArray = response.data.map(x => x.priceUsd);
-
-        generateChart(dateArray,priceArray);
+                        dateArray.push(convertedDate);
+                        priceArray.push(valueOfElement.priceUsd);
+                    });
+                generateChart(dateArray,priceArray);
+            }
+        });
     }
     catch (error) {
         console.log(error);
@@ -104,10 +112,12 @@ function generateChart(chartDate, chartPrice) {
 	});
 }
 
-async function addIdToInput(table){
+ function addIdToInput(table){
     $('#bitcoins').on('click', 'button', function () {
         let data = table.row(this).data();
         let id = data.rank;
+        let name = data.id
         let input = document.getElementById('favorite-id').setAttribute('value',id);
+        let nameInput = document.getElementById('favorite-coin').setAttribute('value',name);
     })
 }

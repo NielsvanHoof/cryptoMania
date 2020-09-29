@@ -7,16 +7,21 @@
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
-            <li class="nav-item">
-                <a class="nav-link" href="/Portfolio">Wallet</a>
+            <% if (locals.login ) { %>
+            <li class="nav-item <% if (title === 'cryptofolio') %> {class='active'}">
+                <a class="nav-link" href="/portfolio/<%- locals.login.username %> ">cryptofolio</a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item <% if (title === 'logout') %> {class='active'}">
+                <a class="nav-link" href="/logout">Logout</a>
+            </li>
+            <% } else { %>
+            <li class="nav-item <% if (title === 'login') %> {class='active'}">
                 <a class="nav-link" href="/login">login</a>
             </li>
-            </li>
-            <li class="nav-item">
+            <li class="nav-item <% if (title === 'register') %> {class='active'}">
                 <a class="nav-link" href="/register">register</a>
             </li>
+            <% } %>
         </ul>
     </div>
 </nav>
